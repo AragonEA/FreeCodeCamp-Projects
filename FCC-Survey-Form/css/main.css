@@ -1,0 +1,112 @@
+header{
+  color: #cc9543;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-left: 0.5em;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: #ffffff;
+
+}
+
+h1 {
+  font: inherit;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  min-height: 120px;
+  width: 98%;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+form {
+
+  background: #f3f3f3;
+  padding: 50px;
+  border-radius: 1%;
+}
+
+
+button{
+  width: calc(100% - 7px);
+  border-radius: 0.2em;
+  box-shadow: 0 0.05em 0.25em 0 rgb(0 0 0 / 50%);
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 3.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color:#6abfc3;
+}
+
+
+.logo_img{
+  height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  float: left;
+}
+.form-control {
+  width: 98%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+.container {
+  margin: 3.125rem auto 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.form-group{
+  width: 98%;
+  box-sizing: border-box;
+  margin: 0 auto 1.25rem auto;
+  padding: 20px;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+#text-area{
+  width: 99%;
+}
+

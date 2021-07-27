@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Technical Documentation</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <header>CSS Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know"
+        >What you should already know</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" href="#Use">Use</a>
+      </li>
+      <li><a class="nav-link" href="#Selector">Selector</a></li>
+      <li>
+        <a class="nav-link" href="#Declaration_Block">Declaration Block</a>
+      </li>
+      <li><a class="nav-link" href="#Lenght_Units">Lenght Units</a></li>
+      <li><a class="nav-link" href="#Specificity">Specificity</a></li>
+      <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+      <li><a class="nav-link" href="#Whitespace">Whitespace</a></li>
+      <li>
+        <a class="nav-link" href="#Positioning">Positioning</a>
+      </li>
+      <li><a class="nav-link" href="#Position_property">Position property</a></li>
+      <li>
+        <a class="nav-link" href="#Float_and_clear"
+        >Float and clear</a
+        >
+      </li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+        </p>
+
+        <p>
+          CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Use">
+      <header>Use</header>
+      <article>
+        <p>
+         Before CSS, nearly all presentational attributes of HTML documents were contained within the HTML markup. All font colors, background styles, element alignments, borders and sizes had to be explicitly described, often repeatedly, within the HTML. CSS lets authors move much of that information to another file, the style sheet, resulting in considerably simpler HTML.
+       </p>
+     </article>
+   </section>
+   <section class="main-section" id="Selector">
+    <header>Selector</header>
+    <article>
+      In CSS, selectors declare which part of the markup a style applies to by matching tags and attributes in the markup itself.
+
+      Selectors may apply to the following:
+      <ul>
+        <li>all elements of a specific type, e.g. the second-level headers h2</li>
+        <li>elements specified by attribute, in particular:
+          <ul>
+            <li>id: an identifier unique within the document, identified with a hash prefix e.g. <code>#id</code></li>
+            <li>class: an identifier that can annotate multiple elements in a document, identified with a period prefix e.g. <code>.classname</code></li>
+          </ul>
+        </li>
+      </ul>
+      <p>The order of the selectors is important. For example,<code>div .myClass {color: red;}</code> applies to all elements of class myClass that are inside div elements, whereas <code>.myClass div {color: red;}</code> applies to all div elements that are inside elements of class myClass.</p>
+
+      Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters, hyphens, and underscores. A class may apply to any number of instances of any elements. An ID may only be applied to a single element.
+    </article>
+  </section>
+  <section class="main-section" id="Declaration_Block">
+    <header>Declaration Block</header>
+    <p>
+      A declaration block consists of a list of <i>declarations</i> in braces. Each declaration itself consists of a property, a colon (<code>:</code>), and a value. If there are multiple declarations in a block, a semi-colon (<code>;</code>) must be inserted to separate each declaration. An optional semi-colon after the last (or single) declaration may be used.
+    </p>
+    <p>
+      Properties are specified in the CSS standard. Each property has a set of possible values. Some properties can affect any type of element, and others apply only to particular groups of elements.
+    </p>
+    <p>
+      Values may be keywords, such as <code>"center"</code> or <code>"inherit"</code>, or numerical values, such as <code>200px</code> (200 pixels), <code>50vw</code> (50 percent of the viewport width) or <code>80%</code> (80 percent of the parent element's width). Color values can be specified with keywords (e.g. <code>"red"</code>), hexadecimal values (e.g. <code>#FF0000</code>, also abbreviated as <code>#F00</code>), RGB values on a <code>0</code> to <code>255</code> scale (e.g. <code>rgb(255, 0, 0)</code>), RGBA values that specify both color and alpha transparency (e.g. <code>rgba(255, 0, 0, 0.8)</code>), or HSL or HSLA values (e.g. <code>hsl(000, 100%, 50%)</code>, <code>hsla(000, 100%, 50%, 80%)</code>).
+    </p>
+  </section>
+  <section class="main-section" id="Lenght_Units">
+    <header>Lenght Units</header>
+    <article>
+      <p>
+       Non-zero numeric values representing linear measures must include a length unit, which is either an alphabetic code or abbreviation, as in <code>200px</code> or <code>50vw</code>; or a percentage sign, as in <code>80%</code>. Some units – <code>cm</code> (centimetre); <code>in</code> (inch); <code>mm</code> (millimetre); <code>pc</code> (pica); and <code>pt</code> (point) – are <i>absolute</i>, which means that the rendered dimension does not depend upon the structure of the page; others – <code>em</code> (em); <code>ex</code> (ex) and <code>px</code> (pixel) – are <i>relative</i>, which means that factors such as the font size of a parent element can affect the rendered measurement.
+     </p>
+   </article>
+ </section>
+ <section class="main-section" id="Specificity">
+  <header>Specificity</header>
+  <article>
+    <p>
+      <i>Specificity</i> refers to the relative weights of various rules. It determines which styles apply to an element when more than one rule could apply. Based on specification, a simple selector (e.g. H1) has a specificity of 1, class selectors have a specificity of 1,0, and ID selectors a specificity of 1,0,0. Because the specificity values do not carry over as in the decimal system, commas are used to separate the "digits".
+    </p>
+  </article>
+</section>
+<section class="main-section" id="Inheritance">
+  <header>Inheritance</header>
+  <article>
+    <p>
+      Inheritance is a key feature in CSS; it relies on the ancestor-descendant relationship to operate. Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants.
+    </p>
+    <p>Descendant elements may inherit CSS property values from any ancestor element enclosing them. In general, descendant elements inherit text-related properties, but their box-related properties are not inherited.
+    </p>
+    <p>
+      Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height, and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index.
+    </p>
+  </article>
+</section>
+<section class="main-section" id="Whitespace">
+  <header>Whitespace</header>
+  <article>
+    <p>
+      Whitespace between properties and selectors is ignored. This code snippet:
+    </p>
+    <code>body{overflow:hidden;background:#000000;background-image:url(images/bg.gif);background-repeat:no-repeat;background-position:left top;}</code>
+    <p>
+      is functionally equivalent to this one:
+    </p>
+    <code>body {
+     overflow: hidden;
+     background-color: #000000;
+     background-image: url(images/bg.gif);
+     background-repeat: no-repeat;
+     background-position: left top;
+   }
+ </code>
+</article>
+</section>
+<section class="main-section" id="Positioning">
+  <header>Positioning</header>
+  <article>
+    <p>CSS 2.1 defines three positioning schemes:</p>
+    <b>Normal flow</b>
+    <p><i>Inline</i> items are laid out in the same way as the letters in words in text, one after the other across the available space until there is no more room, then starting a new line below. <i>Block</i> items stack vertically, like paragraphs and like the items in a bulleted list. Normal flow also includes relative positioning of block or inline items, and run-in boxes.</p>
+    <b>Floats</b>
+    <p>A floated item is taken out of the normal flow and shifted to the left or right as far as possible in the space available. Other content then flows alongside the floated item.</p>
+    <b>Absolute positioning</b>
+    <p>An absolutely positioned item has no place in, and no effect on, the normal flow of other items. It occupies its assigned position in its container independently of other items.</p>
+  </article>
+</section>
+<section class="main-section" id="Position_property">
+  <header>Position property</header>
+  <article>
+    <p>There are five possible values of the <b>position</b> property. If an item is positioned in any way other than <b>static</b>, then the further properties <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> are used to specify offsets and positions.The element having position static is not affected by the <b>top</b>, <b>bottom</b> , <b>left</b> or <b>right</b> properties.</p>
+    <b>Static</b>
+    <p>The default value places the item in the <i>normal flow</i></p>
+    <b>Relative</b>
+    <p>The item is placed in the <i>normal flow</i>, and then shifted or offset from that position. Subsequent flow items are laid out as if the item had not been moved.</p>
+    <b>Absolute</b>
+    <p>Specifies <i>absolute positioning</i>. The element is positioned in relation to its nearest non-static ancestor.</p>
+    <b>Fixed</b>
+    <p>The item is <i>absolutely positioned</i> in a fixed position on the screen even as the rest of the document is scrolled</p>
+  </article>
+</section>
+<section class="main-section" id="Float_and_clear">
+  <header>Float and clear</header>
+  <article>
+    <p>The <b>float</b> property may have one of three values. <i>Absolutely</i> positioned or <i>fixed</i> items cannot be floated. Other elements normally flow around floated items, unless they are prevented from doing so by their <b>clear</b> property.</p>
+
+    <b>Left</b>
+    <p>The item <i>floats</i> to the left of the line that it would have appeared in; other items may flow around its right side.</p>
+    <b>Right</b>
+    <p>The item <i>floats</i> to the right of the line that it would have appeared in; other items may flow around its left side.</p>
+    <b>Clear</b>
+    <p>Forces the element to appear underneath ('clear') floated elements to the left (<code>clear:left</code>), right (<code>clear:right</code>) or both sides (<b>clear:both</b>).</p>
+  </article>
+</section>
+<section class="main-section" id="Reference">
+  <header>Reference</header>
+  <article>
+    <ul>
+      <li>
+        All the documentation in this page is taken from
+        <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+        target="_blank"
+        >MDN Web Docs</a
+        >
+      </li>
+    </ul>
+  </article>
+</section>
+<script src= "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</main>
+</html>
